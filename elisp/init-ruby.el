@@ -23,10 +23,10 @@
 (autoload 'run-ruby "inf-ruby" "Run an inferior Ruby process")
 (autoload 'inf-ruby-keys "inf-ruby" "Set local key defs for inf-ruby in ruby-mode")
 (add-hook 'ruby-mode-hook '(lambda () (inf-ruby-keys)))
-;
-;;; ruby-electric.el --- electric editing commands for ruby files
-;(require 'ruby-electric)
-;(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
+
+;; ruby-electric.el --- electric editing commands for ruby files
+(require 'ruby-electric)
+(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
 
 
 (setq ruby-indent-level 2)
