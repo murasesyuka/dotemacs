@@ -1,5 +1,6 @@
 ;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
 
+
 ;;; キーバインド
 (define-key global-map "\C-h" 'delete-backward-char) ; 削除
 (define-key global-map "\M-?" 'help-for-help)        ; ヘルプ
@@ -48,4 +49,10 @@
 ;;; 少しうるさい
 (icomplete-mode 1)
 
+
+
+;;; ; http://d.hatena.ne.jp/peccu/20100202/1265088619
+;;; 矩形選択と連番挿入
+(setq cua-enable-cua-key nil)
+(cua-mode t)
 
