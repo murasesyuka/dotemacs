@@ -67,5 +67,6 @@
 ;; これやっぱ外しておこうとかいうのを調整するのが面倒。
 (load "init-opensolaris")
 (load "init-ruby")
+(load "init-flymake")
 (load "init-misc")
 
