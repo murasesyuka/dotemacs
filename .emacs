@@ -67,6 +67,7 @@
 ;; これやっぱ外しておこうとかいうのを調整するのが面倒。
 (load "init-opensolaris")
 (load "init-ruby")
+(load "init-scala")
 (load "init-flymake")
 (load "init-misc")
 
