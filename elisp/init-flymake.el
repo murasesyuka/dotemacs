@@ -21,7 +21,7 @@
              (flymake-mode t)))
 
 
-;;; ; http://d.hatena.ne.jp/murase_syuka/draftlist
+;;; ; http://d.hatena.ne.jp/gan2/20080702/1214972962
 ;;; ;; Ruby
 ;;; ;; Invoke ruby with '-c' to get syntax checking
 (defun flymake-ruby-init ()
