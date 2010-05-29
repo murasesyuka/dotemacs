@@ -53,6 +53,6 @@
 
 ;;; ; http://d.hatena.ne.jp/peccu/20100202/1265088619
 ;;; 矩形選択と連番挿入
-(setq cua-enable-cua-key nil)
-(cua-mode t)
+; (setq cua-enable-cua-key nil)
+; (cua-mode t)
 
