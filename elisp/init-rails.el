@@ -2,6 +2,11 @@
 
 ;rails-mode
 
+;; Interactively Do Things (highly recommended, but not strictly required)
+(require 'ido)
+(ido-mode t)
+
+
 ;; Rinari
 ; git clone git://github.com/eschulte/rinari.git
 ; cd rinari
