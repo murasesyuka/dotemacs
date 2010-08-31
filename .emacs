@@ -60,6 +60,17 @@
 
 ;; elispディレクトリをload-pathに追加
 (setq load-path (cons "~/.emacs.d/elisp" load-path))
+(setq load-path (cons "~/.emacs.d/auto-install" load-path))
+
+
+;;;auto-install.el
+(require 'auto-install)
+(setq auto-install-directory "~/.emacs.d/auto-install/")
+(auto-install-update-emacswiki-package-name t) ; EmacsWikiのページ名を保管候補に追加
+(auto-install-compatibility-setup)             ; 互換性確保
+(setq ediff-windows-setup-function 'ediff-setup-windowss-plain) ;ediff関連のバッファを１フレームに纏める
+
+
 
 ;; 個別の設定をロードしまくりパート
 
