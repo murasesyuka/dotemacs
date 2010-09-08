@@ -38,6 +38,9 @@
 (defvar run-emacs22
   (and (equal emacs-major-version 22)
        (null (featurep 'xemacs)))); OpenSolaris2090.06
+(defvar run-emacs23
+  (and (equal emacs-major-version 23)
+       (null (featurep 'xemacs))))
 
 
 ;; meadowの種類とVerを判別
@@ -85,3 +88,14 @@
 (load "init-flymake")
 (load "init-misc")
 
+
+
+;;; This was installed by package-install.el.
+;;; This provides support for the package system and
+;;; interfacing with ELPA, the package archive.
+;;; Move this code earlier if you want to reference
+;;; packages in your .emacs.
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))
