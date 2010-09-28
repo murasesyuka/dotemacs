@@ -1,5 +1,5 @@
 ;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
-
+32!0"c
 
 ;;; キーバインド
 (define-key global-map "\C-h" 'delete-backward-char) ; 削除
@@ -63,4 +63,4 @@
 (use-sticky-key ";" sticky-alist:ja)	;英語キーボードでは、sticky-alist:en
 
 ;;; 日本語マニュアル
-(add-to-list 'Info-directory-list "~/info")
+;(add-to-list 'Info-directory-list "~/info") ;Symbol's value as variable is void: Info-directory-list
