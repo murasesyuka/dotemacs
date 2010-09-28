@@ -12,6 +12,7 @@
 (define-key global-map "\C-o" 'toggle-input-method)  ; 日本語入力切替
 (define-key global-map "\C-\\" nil) ; \C-\の日本語入力の設定を無効にする
 ;(define-key global-map "\C-c " 'other-frame)         ; フレーム移動
+(define-key global-map "\M-g" 'goto-line)             ; goto-line
 
 
 ;;; 日本語の設定 ; Localeに合わせた環境の設定
@@ -56,3 +57,10 @@
 ; (setq cua-enable-cua-key nil)
 ; (cua-mode t)
 
+
+;;; M-x install-elisp-from-emacswiki sticky.el
+(require 'sticky)
+(use-sticky-key ";" sticky-alist:ja)	;英語キーボードでは、sticky-alist:en
+
+;;; 日本語マニュアル
+(add-to-list 'Info-directory-list "~/info")
