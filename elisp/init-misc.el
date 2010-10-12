@@ -1,5 +1,4 @@
 ;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
-32!0"c
 
 ;;; キーバインド
 (define-key global-map "\C-h" 'delete-backward-char) ; 削除
