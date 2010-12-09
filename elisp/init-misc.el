@@ -66,3 +66,11 @@
 
 ;;; ffap.el
 (ffap-binding)
+
+;;; uniquify.el
+(require 'uniquify)
+;; filename<dif> 形式バッファ名にする
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+;; *で囲まれたバッファ名は対象外
+(setq uniquify-ignore-buffres-re "*[^*]+*")
+
