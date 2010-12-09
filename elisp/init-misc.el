@@ -63,3 +63,6 @@
 
 ;;; 日本語マニュアル
 ;(add-to-list 'Info-directory-list "~/info") ;Symbol's value as variable is void: Info-directory-list
+
+;;; ffap.el
+(ffap-binding)
