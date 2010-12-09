@@ -58,8 +58,8 @@
 
 
 ;;; M-x install-elisp-from-emacswiki sticky.el
-(require 'sticky)
-(use-sticky-key ";" sticky-alist:ja)	;英語キーボードでは、sticky-alist:en
+;(require 'sticky)
+;(use-sticky-key ";" sticky-alist:ja)	;英語キーボードでは、sticky-alist:en
 
 ;;; 日本語マニュアル
 ;(add-to-list 'Info-directory-list "~/info") ;Symbol's value as variable is void: Info-directory-list
