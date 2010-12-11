@@ -69,7 +69,7 @@
 ;;;
 
 ;;; ffap.el
-(fnfap-binding)
+(ffap-bindings)
 
 ;;; uniquify.el
 (require 'uniquify)
