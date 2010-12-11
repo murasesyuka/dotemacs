@@ -64,8 +64,12 @@
 ;;; 日本語マニュアル
 ;(add-to-list 'Info-directory-list "~/info") ;Symbol's value as variable is void: Info-directory-list
 
+;;;
+;;; chapter04
+;;;
+
 ;;; ffap.el
-(ffap-binding)
+(fnfap-binding)
 
 ;;; uniquify.el
 (require 'uniquify)
