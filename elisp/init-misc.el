@@ -104,6 +104,8 @@
 (setq undo-limit 600000)
 (setq undo-strong-limit 900000)
 
-
+;; (install-elisp "http://taiyaki.org/elisp/sense-region/src/sense-region.el")
+(require 'sense-region)
+(sense-region-on)
 
 
