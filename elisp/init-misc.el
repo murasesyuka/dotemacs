@@ -91,6 +91,14 @@
 (setq iswitchb-prompt-newbuffer nil)
 
 
+;; (install-elisp-from-emacswiki "recentf-ext.el"
+;; 最近のファイルを500個を保存する
+(setq recentf-max-saved-items 500)
+;; 最近使ったファイルを加えないでファイルを正規表現でしてする
+(setq recentf-exclude '("/TAGS$" "/var/tmp/"))
+(require 'recentf-ext)
+
+
 ;;;
 ;;; chapter06
 ;;;
@@ -105,7 +113,7 @@
 (setq undo-strong-limit 900000)
 
 ;; (install-elisp "http://taiyaki.org/elisp/sense-region/src/sense-region.el")
-(require 'sense-region)
-(sense-region-on)
+;(require 'sense-region)
+;(sense-region-on)
 
 
