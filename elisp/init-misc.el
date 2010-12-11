@@ -68,8 +68,10 @@
 ;;; chapter04
 ;;;
 
+
 ;;; ffap.el
 (ffap-bindings)
+
 
 ;;; uniquify.el
 (require 'uniquify)
@@ -77,6 +79,16 @@
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 ;; *で囲まれたバッファ名は対象外
 (setq uniquify-ignore-buffres-re "*[^*]+*")
+
+
+;;; iswitchb.el
+(iswitchb-mode 1)
+;; バッファ読み取り関数を iswitchb にする
+(setq read-buffer-function 'iswitchb-read-buffer)
+;; 部分文字列の代わりに正規表現を使う場合は t に設定する
+(setq iswitchb-regexp nil)
+;; 新しいバッファを作成するときにいちいち聞いてこない
+(setq iswitchb-prompt-newbuffer nil)
 
 
 ;;;
