@@ -64,10 +64,13 @@
 ;;; 日本語マニュアル
 ;(add-to-list 'Info-directory-list "~/info") ;Symbol's value as variable is void: Info-directory-list
 
+
+
+
+
 ;;;
 ;;; chapter04
 ;;;
-
 
 ;;; ffap.el
 (ffap-bindings)
@@ -97,6 +100,13 @@
 ;; 最近使ったファイルを加えないでファイルを正規表現でしてする
 (setq recentf-exclude '("/TAGS$" "/var/tmp/"))
 (require 'recentf-ext)
+
+;; (install-elisp "http://homepage3.nifty.com/oatu/emacs/archives/auto-save-buffers.el")
+(require 'auto-save-buffers)
+(run-with-idle-timer 2 t 'auto-save-buffers) 
+
+
+
 
 
 ;;;
