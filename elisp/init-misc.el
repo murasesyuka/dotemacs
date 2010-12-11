@@ -5,7 +5,7 @@
 (define-key global-map "\M-?" 'help-for-help)        ; ヘルプ
 (define-key global-map "\C-z" 'undo)                 ; undo
 (define-key global-map "\C-ci" 'indent-region)       ; インデント
-(define-key global-map "\C-c\C-i" 'dabbrev-expand)   ; 補完
+;(define-key global-map "\C-c\C-i" 'dabbrev-expand)   ; 補完
 ;(define-key global-map "\C-c;" 'comment-region)      ; コメントアウト
 ;(define-key global-map "\C-c:" 'uncomment-region)    ; コメント解除
 (define-key global-map "\C-o" 'toggle-input-method)  ; 日本語入力切替
@@ -77,4 +77,21 @@
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 ;; *で囲まれたバッファ名は対象外
 (setq uniquify-ignore-buffres-re "*[^*]+*")
+
+
+;;;
+;;; chapter06
+;;;
+
+;; (install-elisp-from-emacswiki "redo+.el")
+(require 'redo+)
+(global-set-key (kbd "C-M-/") 'redo)
+;(define-key global-map "\C-\M-/" 'redo)
+(setq undo-no-redo t) ; 過去のundoがredoされないようにする
+;; 大量のundoに耐えられようにする
+(setq undo-limit 600000)
+(setq undo-strong-limit 900000)
+
+
+
 
