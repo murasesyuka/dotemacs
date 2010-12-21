@@ -1,17 +1,19 @@
-;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
+32;10;2c;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
 
 ;;; キーバインド
-(define-key global-map "\C-h" 'delete-backward-char) ; 削除
-(define-key global-map "\M-?" 'help-for-help)        ; ヘルプ
-(define-key global-map "\C-z" 'undo)                 ; undo
-(define-key global-map "\C-ci" 'indent-region)       ; インデント
-;(define-key global-map "\C-c\C-i" 'dabbrev-expand)   ; 補完
-;(define-key global-map "\C-c;" 'comment-region)      ; コメントアウト
-;(define-key global-map "\C-c:" 'uncomment-region)    ; コメント解除
-(define-key global-map "\C-o" 'toggle-input-method)  ; 日本語入力切替
-(define-key global-map "\C-\\" nil) ; \C-\の日本語入力の設定を無効にする
-;(define-key global-map "\C-c " 'other-frame)         ; フレーム移動
-(define-key global-map "\M-g" 'goto-line)             ; goto-line
+(global-set-key (kbd "C-h") 'delete-backward-char) ; 削除
+(global-set-key (kbd "M-?") 'help-for-help)        ; ヘルプ
+(global-set-key (kbd "C-z") 'undo)                 ; undo
+(global-set-key (kbd "C-u") 'redo)                 ; redo
+;(global-set-key (kbd "C-c i") 'indent-region)       ; インデント
+;(global-set-key (kbd "C-c C-i") 'dabbrev-expand)   ; 補完
+;(global-set-key (kbd "C-c ;") 'comment-region)      ; コメントアウト
+;(global-set-key (kbd "C-c :") 'uncomment-region)    ; コメント解除
+(global-set-key (kbd "C-o") 'toggle-input-method)  ; 日本語入力切替
+(global-set-key (kbd "C-\\") nil) ; \C-\の日本語入力の設定を無効にする
+;(global-set-key (kbd "C-c ") 'other-frame)         ; フレーム移動
+(global-set-key (kbd "M-g") 'goto-line)             ; goto-line
+
 
 
 ;;; 日本語の設定 ; Localeに合わせた環境の設定
@@ -113,8 +115,10 @@
 ;;; chapter06
 ;;;
 
+(global-set-key (kbd "C-/") 'undo)                 ; undo
 ;; (install-elisp-from-emacswiki "redo+.el")
 (require 'redo+)
+(global-set-key (kbd "C-_") 'redo)
 (global-set-key (kbd "C-M-/") 'redo)
 ;(define-key global-map "\C-\M-/" 'redo)
 (setq undo-no-redo t) ; 過去のundoがredoされないようにする
