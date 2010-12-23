@@ -98,7 +98,7 @@
 
 ;; (install-elisp-from-emacswiki "recentf-ext.el"
 ;; 最近のファイルを500個を保存する
-(setq recentf-max-saved-items 500)
+(setq recentf-max-saved-items 3000)
 ;; 最近使ったファイルを加えないでファイルを正規表現でしてする
 (setq recentf-exclude '("/TAGS$" "/var/tmp/"))
 (require 'recentf-ext)
