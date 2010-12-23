@@ -110,6 +110,16 @@
 
 
 
+;;;
+;;; chapter05
+;;;
+
+;(setq transient-mark-mode t)  ;常に有効にする場合 ;Emacs23ではデフォルト有効
+
+
+;; migemo.el
+(require 'migemo)
+
 
 ;;;
 ;;; chapter06
