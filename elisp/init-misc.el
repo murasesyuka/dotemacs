@@ -134,6 +134,26 @@
 (define-key global-map (kbd "S-<f7>") 'point-redo)
 
 
+;; (install-elisp "http://cvs.savannah.gnu.org/viewvc/*checkout*/bm/bm/bm.el")
+;; save bookmarks
+(setq-default bm-buffer-persistence nil)
+(setq bm-restore-repository-on-load t)
+(require 'bm)
+;; Restoring bookmarks when on file find.
+(add-hook 'find-file-hooks 'bm-buffer-restore)
+(add-hook 'after-revert-hook 'bm-buffer-restore)
+;; Saving bookmark data on killing and saving a buffer
+(add-hook 'kill-buffer-hook 'bm-buffer-save)
+(add-hook 'after-save-hook 'bm-buffer-save)
+(add-hook 'vc-before-checkin-hook 'bm-buffer-save)
+;; ;; Loading the repository from file when on start up.
+;; (add-hook' after-init-hook 'bm-repository-load)
+(global-set-key (kbd "M-SPC") 'bm-toggle)
+(global-set-key (kbd "M-[") 'bm-previous)
+(global-set-key (kbd "M-]") 'bm-next)
+
+
+
 
 ;;;
 ;;; chapter06
