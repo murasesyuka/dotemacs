@@ -147,7 +147,7 @@
 (add-hook 'vc-before-checkin-hook 'bm-buffer-save)
 ;; ;; Loading the repository from file when on start up.
 ;; (add-hook' after-init-hook 'bm-repository-load)
-(global-set-key (kbd "M-SPC") 'bm-toggle)
+(global-set-key (kbd "C-M-SPC") 'bm-toggle)
 (global-set-key (kbd "M-[") 'bm-previous)
 (global-set-key (kbd "M-]") 'bm-next)
 
