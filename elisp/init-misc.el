@@ -4,8 +4,7 @@
 (global-set-key (kbd "C-h") 'delete-backward-char) ; 削除
 (global-set-key (kbd "M-?") 'help-for-help)        ; ヘルプ
 (global-set-key (kbd "C-z") 'undo)                 ; undo
-(global-set-key (kbd "C-u") 'undo)                 ; undo
-(global-set-key (kbd "C-M-u") 'redo)                 ; redo
+(global-set-key (kbd "C-M-z") 'redo)                 ; redo
 ;(global-set-key (kbd "C-c i") 'indent-region)       ; インデント
 ;(global-set-key (kbd "C-c C-i") 'dabbrev-expand)   ; 補完
 ;(global-set-key (kbd "C-c ;") 'comment-region)      ; コメントアウト
