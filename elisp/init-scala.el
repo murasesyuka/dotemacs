@@ -5,6 +5,10 @@
 
 ;scala-mode
 (require 'scala-mode-auto)
+(require 'scala-mode-feature-electric)
+(add-hook 'scala-mode-hook
+	  (lambda ()
+	    (scala-electric-mode)))
 
 
 ;Ya-snippets
