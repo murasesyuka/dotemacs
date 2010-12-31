@@ -174,3 +174,12 @@
 ;(sense-region-on)
 
 
+
+;;;
+;;; chapter13
+;;;
+
+
+;; (install-elisp-from-emacswiki "summarye.el")
+(require 'summarye)
+
