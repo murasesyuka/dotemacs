@@ -182,4 +182,4 @@
 
 ;; (install-elisp-from-emacswiki "summarye.el")
 (require 'summarye)
-
+(global-set-key (kbd "C-7") 'se/make-summary-buffer)
