@@ -80,7 +80,7 @@
 ;; 特定ディレクトリ以下を自動でロードするようにしてもいいけど、順番とか、
 ;; これやっぱ外しておこうとかいうのを調整するのが面倒。
 (load "init-opensolaris")
-;(load "init-anything")
+(load "init-anything")
 
 (load "init-ruby")
 (load "init-rails")
