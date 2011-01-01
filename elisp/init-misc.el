@@ -176,6 +176,14 @@
 
 
 ;;;
+;;; chapter08
+;;;
+
+(require 'w3m-load)
+
+
+
+;;;
 ;;; chapter13
 ;;;
 
