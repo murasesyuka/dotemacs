@@ -203,3 +203,11 @@
 ;; (install-elisp-from-emacswiki "summarye.el")
 (require 'summarye)
 (global-set-key (kbd "C-7") 'se/make-summary-buffer)
+
+
+;; (auto-install-batch translator)
+(require 'text-translator)
+(setq text-translator-auto-selection-func
+      'text-translator-translate-by-auto-selection-enja)
+
+
