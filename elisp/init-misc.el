@@ -179,7 +179,19 @@
 ;;; chapter08
 ;;;
 
+;; w3m.el
 (require 'w3m-load)
+
+;; twittering-mode.el
+; git clone git://github.com/hayamiz/twittering-mode.git
+(add-to-list 'load-path "~/.emacs.d/elisp/twittering-mode")
+(require 'twittering-mode)
+
+;(autoload 'twit "twittering-mode" nil t)
+(setq twittering-username "murase_syuka")
+; ;;(setq twittering-password "twitter_passwd")  ;must not use
+
+;(setq twittering-icon-mode t)   ; iconの表示
 
 
 
