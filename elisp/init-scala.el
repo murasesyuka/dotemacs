@@ -20,3 +20,12 @@
 ;               ))
 
 
+;ensime-mode
+(add-to-list 'load-path "~/.emacs.d/elisp/ensime_2.8.1-0.4/elisp/")
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+
+;; MINI HOWTO: 
+;; Open .scala file. M-x ensime (once per project)
+
+
