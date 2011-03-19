@@ -12,3 +12,8 @@
          (local-set-key "\C-t" 'gtags-pop-stack)
          ))
 
+(add-hook 'c-mode-common-hook
+          '(lambda()
+             (gtags-mode 1)
+             (gtags-make-complete-list)
+             ))
