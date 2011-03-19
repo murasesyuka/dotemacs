@@ -86,6 +86,7 @@
 (load "init-rails")
 (load "init-scala")
 (load "init-flymake")
+(load "init-gnu_global")
 (load "init-misc")
 
 
