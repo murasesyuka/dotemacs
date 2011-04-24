@@ -119,6 +119,9 @@
 
 ;; migemo.el
 (require 'migemo)
+; use ruby-migemo
+(setq migemo-command "/usr/bin/ruby")
+; use cmigemo
 ;; (setq migemo-command "cmigemo")
 ;; (setq migemo-options '("-q" "--emacs"))
 ;; ;; migemo-dictのパスを指定
