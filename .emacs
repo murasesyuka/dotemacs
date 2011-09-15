@@ -85,8 +85,10 @@
 (load "init-ruby")
 (load "init-rails")
 (load "init-scala")
+(load "init-javascript")
 (load "init-flymake")
 (load "init-gnu_global")
+(load "init-gdb")
 (load "init-ecb")
 (load "init-misc")
 
