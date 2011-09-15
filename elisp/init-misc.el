@@ -15,6 +15,10 @@
 (global-set-key (kbd "M-g") 'goto-line)             ; goto-line
 
 
+;;; バッファ移動
+(setq windmove-wrap-around t)
+(windmove-default-keybindings) ; Shift + ↓ or → or ← or ↑
+
 
 ;;; 日本語の設定 ; Localeに合わせた環境の設定
 (set-locale-environment nil)
