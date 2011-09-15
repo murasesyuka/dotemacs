@@ -63,7 +63,7 @@
 ; (cua-mode t)
 
 
-;;; M-x install-elisp-from-emacswiki sticky.el
+;;; (install-elisp-from-emacswiki "sticky.el")
 ;(require 'sticky)
 ;(use-sticky-key ";" sticky-alist:ja)	;英語キーボードでは、sticky-alist:en
 
@@ -100,7 +100,7 @@
 (setq iswitchb-prompt-newbuffer nil)
 
 
-;; (install-elisp-from-emacswiki "recentf-ext.el"
+;; (install-elisp-from-emacswiki "recentf-ext.el")
 ;; 最近のファイルを500個を保存する
 (setq recentf-max-saved-items 3000)
 ;; 最近使ったファイルを加えないでファイルを正規表現でしてする
@@ -200,6 +200,19 @@
 
 ;(setq twittering-icon-mode t)   ; iconの表示
 
+
+
+;;;
+;;; chapter12
+;;;
+
+;; (install-elisp-from-emacswiki "eldoc-extension.el")
+(require 'eldoc-extension)
+(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
+(setq eldoc-idle-delay 0.2)       ; すぐに表示
+(setq eldoc-minor-mode-string "") ; モードラインにElDocと表示しない
 
 
 ;;;
