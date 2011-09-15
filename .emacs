@@ -82,6 +82,7 @@
 (load "init-opensolaris")
 (load "init-anything")
 
+(load "init-c_cpp")
 (load "init-ruby")
 (load "init-rails")
 (load "init-scala")
