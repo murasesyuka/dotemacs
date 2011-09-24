@@ -17,7 +17,13 @@
 
 ;;; バッファ移動
 (setq windmove-wrap-around t)
-(windmove-default-keybindings) ; Shift + ↓ or → or ← or ↑
+;; Shift + ↓ or → or ← or ↑
+(windmove-default-keybindings)
+;; C-M-{h,j,k,l}でウィンドウ間を移動
+(define-key global-map (kbd "C-M-k") 'windmove-up)
+(define-key global-map (kbd "C-M-j") 'windmove-down)
+(define-key global-map (kbd "C-M-l") 'windmove-right)
+(define-key global-map (kbd "C-M-h") 'windmove-left)
 
 
 ;;; 日本語の設定 ; Localeに合わせた環境の設定
