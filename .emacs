@@ -91,6 +91,7 @@
 (load "init-gnu_global")
 (load "init-gdb")
 (load "init-ecb")
+(load "init-rst")
 (load "init-misc")
 
 
