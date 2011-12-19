@@ -86,6 +86,11 @@
 (require 'open-junk-file)
 ;; C-x C-zで試行錯誤ファイルを開く
 (global-set-key (kbd "C-x C-z") 'open-junk-file)
+;;; 式の評価結果を注釈するために設定
+(require 'lispxmp)
+;; emacs-lisp-modeでC-c C-dを押すと注釈される
+(define-key emacs-lisp-mode-map (kbd "C-c C-d") 'lispxmp)
+
 
 
 
