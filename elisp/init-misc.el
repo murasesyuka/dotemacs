@@ -41,9 +41,6 @@
 (setq font-lock-maximum-decoration t)
 (setq fast-lock-cache-directories '("~/.emacs-flc" "."))
 
-;;; 対応する括弧を光らせる。
-(show-paren-mode 1)
-
 ;;; ツールバーを消す
 (tool-bar-mode 0)
 
@@ -113,7 +110,12 @@
 (add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
 (setq eldoc-idle-delay 0.2)            ; すぐに表示したい
 (setq eldoc-minor-mode-string "")      ; モードラインにElDocと表示しない
-
+;; 釣り合いのとれる括弧をハイライトする
+(show-paren-mode 1)
+;; 改行と同時にインデントも行う
+(global-set-key "\C-m" 'newline-and-indent)
+;; find-functionをキー割当する
+(find-function-setup-keys)
 
 
 
