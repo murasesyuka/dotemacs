@@ -165,6 +165,13 @@
 (global-set-key (kbd "C-x C-c") 'server-edit)
 ;; M-x exitでEmacsを終了できるようにする
 (defalias 'exit 'save-buffers-kill-emacs)
+;;; http://d.hatena.ne.jp/h_iijima/20110401/1301620545
+;; emacsclient でアクセスした時の文字コード設定
+;; バグ: "emacsclient -c" で起動すると実行されない
+(add-hook 'server-visit-hook
+          (lambda ()
+            (set-terminal-coding-system 'utf-8)
+            (set-keyboard-coding-system 'utf-8)))
 
 
 ;; (install-elisp "http://homepage3.nifty.com/oatu/emacs/archives/auto-save-buffers.el")
