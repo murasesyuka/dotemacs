@@ -105,11 +105,11 @@
 ;; 自動バイトコンパイルを無効化にするファイル名の正規表現
 (setq auto-async-byte-compile-exclude-files-regexp "/junk/")
 (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode)
-(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
-(add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
-(add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
-(setq eldoc-idle-delay 0.2)            ; すぐに表示したい
-(setq eldoc-minor-mode-string "")      ; モードラインにElDocと表示しない
+;; (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+;; (add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
+;; (add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
+;; (setq eldoc-idle-delay 0.2)            ; すぐに表示したい
+;; (setq eldoc-minor-mode-string "")      ; モードラインにElDocと表示しない
 ;; 釣り合いのとれる括弧をハイライトする
 (show-paren-mode 1)
 ;; 改行と同時にインデントも行う
@@ -151,6 +151,21 @@
 ;; 最近使ったファイルを加えないでファイルを正規表現でしてする
 (setq recentf-exclude '("/TAGS$" "/var/tmp/"))
 (require 'recentf-ext)
+
+
+;; emacsclient
+(require 'server)
+(unless (server-running-p)
+  (server-start))
+(defun iconify-emacs-when-server-is-done ()
+  (unless server-clients (iconify-frame)))
+;; 編集が終了したらEmacsをアイコン化する（好みに応じて）
+(add-hook 'server-done-hook 'iconify-emacs-when-server-is-done)
+;; C-x C-cに割り当てる（好みに応じて）
+(global-set-key (kbd "C-x C-c") 'server-edit)
+;; M-x exitでEmacsを終了できるようにする
+(defalias 'exit 'save-buffers-kill-emacs)
+
 
 ;; (install-elisp "http://homepage3.nifty.com/oatu/emacs/archives/auto-save-buffers.el")
 (require 'auto-save-buffers)
