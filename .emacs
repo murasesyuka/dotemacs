@@ -79,41 +79,42 @@
 
 ;; 特定ディレクトリ以下を自動でロードするようにしてもいいけど、順番とか、
 ;; これやっぱ外しておこうとかいうのを調整するのが面倒。
+(load "init-face")
 (load "init-opensolaris")
 (load "init-anything")
 
 (load "init-c_cpp")
 (load "init-ruby")
 (load "init-rails")
-(load "init-scala")
+;(load "init-scala")
 (load "init-javascript")
 (load "init-flymake")
 (load "init-gnu_global")
 (load "init-gdb")
-(load "init-ecb")
+;(load "init-ecb")
 (load "init-rst")
 (load "init-misc")
 
 
 
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(ecb-options-version "2.32"))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
+;; ;;; This was installed by package-install.el.
+;; ;;; This provides support for the package system and
+;; ;;; interfacing with ELPA, the package archive.
+;; ;;; Move this code earlier if you want to reference
+;; ;;; packages in your .emacs.
+;; (when
+;;     (load
+;;      (expand-file-name "~/.emacs.d/elpa/package.el"))
+;;   (package-initialize))
+;; (custom-set-variables
+;;   ;; custom-set-variables was added by Custom.
+;;   ;; If you edit it by hand, you could mess it up, so be careful.
+;;   ;; Your init file should contain only one such instance.
+;;   ;; If there is more than one, they won't work right.
+;;  '(ecb-options-version "2.32"))
+;; (custom-set-faces
+;;   ;; custom-set-faces was added by Custom.
+;;   ;; If you edit it by hand, you could mess it up, so be careful.
+;;   ;; Your init file should contain only one such instance.
+;;   ;; If there is more than one, they won't work right.
+;;  )
