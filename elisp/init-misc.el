@@ -24,6 +24,12 @@
 (define-key global-map (kbd "C-M-j") 'windmove-down)
 (define-key global-map (kbd "C-M-l") 'windmove-right)
 (define-key global-map (kbd "C-M-h") 'windmove-left)
+;; C-tで分割時移動、分割されていない場合は左右分割して移動
+(defun other-window-or-split ()
+  (interactive)
+  (when (one-window-p) (split-window-horizontally))
+  (other-window 1))
+(global-set-key (kbd "C-t") 'other-window-or-split)
 
 
 ;;; 日本語の設定 ; Localeに合わせた環境の設定
