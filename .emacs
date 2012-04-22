@@ -96,7 +96,8 @@
 (load "init-misc")
 
 
-
+;; ;; switch to marmalade
+;;
 ;; ;;; This was installed by package-install.el.
 ;; ;;; This provides support for the package system and
 ;; ;;; interfacing with ELPA, the package archive.
@@ -106,6 +107,8 @@
 ;;     (load
 ;;      (expand-file-name "~/.emacs.d/elpa/package.el"))
 ;;   (package-initialize))
+
+
 ;; (custom-set-variables
 ;;   ;; custom-set-variables was added by Custom.
 ;;   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -118,3 +121,12 @@
 ;;   ;; Your init file should contain only one such instance.
 ;;   ;; If there is more than one, they won't work right.
 ;;  )
+
+
+;;; Marmalade ; http://marmalade-repo.org/
+;; http://repo.or.cz/w/emacs.git/blob_plain/1a0a666f941c99882093d7bd08ced15033bc3f0c:/lisp/emacs-lisp/package.el
+(add-to-list 'load-path "~/.emacs.d/plugin/for23") ;; package.el for emacs 23
+(require 'package)
+(add-to-list 'package-archives
+	     '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
