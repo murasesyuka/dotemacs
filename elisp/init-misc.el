@@ -253,6 +253,9 @@
 ;(require 'sense-region)
 ;(sense-region-on)
 
+;; auto-complete.el
+(require 'auto-complete-config)
+(global-auto-complete-mode 1)
 
 
 ;; ;;;
