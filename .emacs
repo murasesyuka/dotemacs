@@ -75,27 +75,6 @@
 
 
 
-;; 個別の設定をロードしまくりパート
-
-;; 特定ディレクトリ以下を自動でロードするようにしてもいいけど、順番とか、
-;; これやっぱ外しておこうとかいうのを調整するのが面倒。
-(load "init-face")
-(load "init-opensolaris")
-(load "init-anything")
-
-(load "init-c_cpp")
-(load "init-ruby")
-(load "init-rails")
-;(load "init-scala")
-(load "init-javascript")
-(load "init-flymake")
-(load "init-gnu_global")
-(load "init-gdb")
-;(load "init-ecb")
-(load "init-rst")
-(load "init-misc")
-
-
 ;; ;; switch to marmalade
 ;;
 ;; ;;; This was installed by package-install.el.
@@ -131,4 +110,28 @@
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+;; 個別の設定をロードしまくりパート
+
+;; 特定ディレクトリ以下を自動でロードするようにしてもいいけど、順番とか、
+;; これやっぱ外しておこうとかいうのを調整するのが面倒。
+(load "init-face")
+(load "init-opensolaris")
+(load "init-anything")
+
+(load "init-c_cpp")
+(load "init-ruby")
+(load "init-rails")
+;(load "init-scala")
+(load "init-javascript")
 (load "init-clojure")
+(load "init-flymake")
+(load "init-gnu_global")
+(load "init-gdb")
+;(load "init-ecb")
+(load "init-rst")
+(load "init-misc")
+
+
+
+
+
