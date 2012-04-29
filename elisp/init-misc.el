@@ -1,5 +1,10 @@
 ;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
 
+;;; scrollバー
+;; http://d.hatena.ne.jp/m2ym/20110401/1301617991
+(require 'yascroll)
+(global-yascroll-bar-mode 1)
+
 ;;; キーバインド
 (global-set-key (kbd "C-h") 'delete-backward-char) ; 削除
 (global-set-key (kbd "M-?") 'help-for-help)        ; ヘルプ
