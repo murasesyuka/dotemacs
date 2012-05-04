@@ -65,6 +65,8 @@
 (setq load-path (cons "~/.emacs.d/elisp" load-path))
 (setq load-path (cons "~/.emacs.d/auto-install" load-path))
 
+;(add-to-list `load-path "~/svn2git/emacswikipages/" t) ; add to last
+
 
 ;;;auto-install.el
 ;; (install-elisp-from-emacswiki "auto-install.el")
