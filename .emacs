@@ -67,6 +67,7 @@
 
 
 ;;;auto-install.el
+;; (install-elisp-from-emacswiki "auto-install.el")
 (require 'auto-install)
 (setq auto-install-directory "~/.emacs.d/auto-install/")
 (auto-install-update-emacswiki-package-name t) ; EmacsWikiのページ名を保管候補に追加
@@ -115,6 +116,7 @@
 ;; 特定ディレクトリ以下を自動でロードするようにしてもいいけど、順番とか、
 ;; これやっぱ外しておこうとかいうのを調整するのが面倒。
 (load "init-face")
+(load "init-e2wm")
 (load "init-opensolaris")
 (load "init-anything")
 
