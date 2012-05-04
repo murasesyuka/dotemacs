@@ -125,6 +125,7 @@
 (load "init-c_cpp")
 (load "init-ruby")
 (load "init-rails")
+(load "init-python")
 ;(load "init-scala")
 (load "init-javascript")
 (load "init-clojure")
