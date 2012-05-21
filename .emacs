@@ -62,8 +62,12 @@
 
 
 ;; elispディレクトリをload-pathに追加
-(setq load-path (cons "~/.emacs.d/elisp" load-path))
-(setq load-path (cons "~/.emacs.d/auto-install" load-path))
+(setq load-path (append '(
+			  "~/.emacs.d/elisp"
+			  "~/.emacs.d/auto-install"
+			  ;; "~/.emacs.d/plugin/org-mode/head/lisp";the latest org-mode
+			  "~/.emacs.d/plugin/org-mode/org-7.8.10/lisp";org-mode
+			  ) load-path))
 
 ;(add-to-list `load-path "~/svn2git/emacswikipages/" t) ; add to last
 
@@ -134,6 +138,7 @@
 (load "init-gdb")
 ;(load "init-ecb")
 (load "init-rst")
+(load "init-org")
 (load "init-misc")
 
 
