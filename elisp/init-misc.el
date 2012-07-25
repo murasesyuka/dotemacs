@@ -46,6 +46,18 @@
 (mouse-wheel-mode t)
 (setq mouse-wheel-follow-mofasluse t)
 
+;; ; http://www.geocities.jp/tamiyagi2/emacs.html
+;; ;; Ctrl+マウススクロールでズーム
+;; (if (and (>= emacs-major-version 23) (window-system))
+;;     (progn
+;;       (global-set-key
+;;        (vector (list 'control mouse-wheel-down-event))
+;;        'text-scale-increase)
+;;       (global-set-key
+;;        (vector (list 'control mouse-wheel-up-event))
+;;        'text-scale-decrease)))
+
+
 ;;; 色を付ける
 (global-font-lock-mode t)
 ;(setq font-lock-support-mode 'fast-lock-mode)
@@ -94,6 +106,8 @@
 (require 'open-junk-file)
 ;; C-x C-zで試行錯誤ファイルを開く
 (global-set-key (kbd "C-x C-z") 'open-junk-file)
+(setq open-junk-file-format "~/Dropbox/junk/%Y-%m-%d-%H%M%S.")
+
 ;;; 式の評価結果を注釈するために設定
 (require 'lispxmp)
 ;; emacs-lisp-modeでC-c C-dを押すと注釈される
