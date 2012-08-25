@@ -126,6 +126,7 @@
 (load "init-face")
 (load "init-e2wm")
 (load "init-opensolaris")
+(load "init-helm")
 
 (load "init-c_cpp")
 (load "init-ruby")
