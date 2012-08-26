@@ -41,6 +41,9 @@
 (defvar run-emacs23
   (and (equal emacs-major-version 23)
        (null (featurep 'xemacs))))
+(defvar run-emacs24
+  (and (equal emacs-major-version 24)
+       (null (featurep 'xemacs))))
 
 
 ;; meadowの種類とVerを判別
