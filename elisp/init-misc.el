@@ -75,11 +75,11 @@
 ;;; 強力な補完機能を使う
 ;;; p-bでprint-bufferとか
 ;;(load "complete")
-(partial-completion-mode 1)
+;(partial-completion-mode 1)
 
 ;;; 補完可能なものを随時表示
 ;;; 少しうるさい
-(icomplete-mode 1)
+;(icomplete-mode 1)
 
 
 
