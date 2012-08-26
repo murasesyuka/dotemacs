@@ -85,33 +85,6 @@
 
 
 
-;; ;; switch to marmalade
-;;
-;; ;;; This was installed by package-install.el.
-;; ;;; This provides support for the package system and
-;; ;;; interfacing with ELPA, the package archive.
-;; ;;; Move this code earlier if you want to reference
-;; ;;; packages in your .emacs.
-;; (when
-;;     (load
-;;      (expand-file-name "~/.emacs.d/elpa/package.el"))
-;;   (package-initialize))
-
-
-;; (custom-set-variables
-;;   ;; custom-set-variables was added by Custom.
-;;   ;; If you edit it by hand, you could mess it up, so be careful.
-;;   ;; Your init file should contain only one such instance.
-;;   ;; If there is more than one, they won't work right.
-;;  '(ecb-options-version "2.32"))
-;; (custom-set-faces
-;;   ;; custom-set-faces was added by Custom.
-;;   ;; If you edit it by hand, you could mess it up, so be careful.
-;;   ;; Your init file should contain only one such instance.
-;;   ;; If there is more than one, they won't work right.
-;;  )
-
-
 ;;; MELPA ; http://melpa.milkbox.net/
 ;;; Marmalade ; http://marmalade-repo.org/
 ;; http://repo.or.cz/w/emacs.git/blob_plain/1a0a666f941c99882093d7bd08ced15033bc3f0c:/lisp/emacs-lisp/package.el
@@ -141,7 +114,6 @@
 (load "init-flymake")
 (load "init-gnu_global")
 (load "init-gdb")
-;(load "init-ecb")
 (load "init-rst")
 (load "init-org")
 (load "init-misc")
