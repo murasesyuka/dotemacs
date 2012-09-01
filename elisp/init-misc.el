@@ -8,8 +8,8 @@
 ;;; キーバインド
 (global-set-key (kbd "C-h") 'delete-backward-char) ; 削除
 (global-set-key (kbd "M-?") 'help-for-help)        ; ヘルプ
-(global-set-key (kbd "C-z") 'undo)                 ; undo
-(global-set-key (kbd "C-M-z") 'redo)                 ; redo
+;(global-set-key (kbd "C-z") 'undo)                 ; undo
+;(global-set-key (kbd "C-M-z") 'redo)                 ; redo
 ;(global-set-key (kbd "C-c i") 'indent-region)       ; インデント
 ;(global-set-key (kbd "C-c C-i") 'dabbrev-expand)   ; 補完
 ;(global-set-key (kbd "C-c ;") 'comment-region)      ; コメントアウト
@@ -81,7 +81,9 @@
 ;;; 少しうるさい
 ;(icomplete-mode 1)
 
-
+;;; http://d.hatena.ne.jp/khiker/20070129/nyumon_gnu_emacs
+;;; 少し使いやすいファイラ
+(setq dired-dwim-target t)
 
 ;;; ; http://d.hatena.ne.jp/peccu/20100202/1265088619
 ;;; 矩形選択と連番挿入
@@ -261,7 +263,7 @@
 ;; (install-elisp-from-emacswiki "redo+.el")
 (require 'redo+)
 (global-set-key (kbd "C-_") 'redo)
-(global-set-key (kbd "C-M-/") 'redo)
+;(global-set-key (kbd "C-M-/") 'redo)
 ;(define-key global-map "\C-\M-/" 'redo)
 (setq undo-no-redo t) ; 過去のundoがredoされないようにする
 ;; 大量のundoに耐えられようにする
