@@ -116,6 +116,8 @@
 (load "init-gdb")
 (load "init-rst")
 (load "init-org")
+(load "init-quickrun")
+
 (load "init-misc")
 
 
