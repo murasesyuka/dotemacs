@@ -215,17 +215,17 @@
 ;(setq transient-mark-mode t)  ;常に有効にする場合 ;Emacs23ではデフォルト有効
 
 
-;; migemo.el
-(require 'migemo)
-; use ruby-migemo
-(setq migemo-command "/usr/bin/ruby")
-; use cmigemo
-;; (setq migemo-command "cmigemo")
-;; (setq migemo-options '("-q" "--emacs"))
-;; ;; migemo-dictのパスを指定
-;; (setq migemo-dictionary "/usr/local/share/euc-jp/migemo-dict")
-;; (setq migemo-user-dictionary nil)
-;; (setq migemo-regex-dictionary nil)
+;; ;; migemo.el
+;; (require 'migemo)
+;; ; use ruby-migemo
+;; (setq migemo-command "/usr/bin/ruby")
+;; ; use cmigemo
+;; ;; (setq migemo-command "cmigemo")
+;; ;; (setq migemo-options '("-q" "--emacs"))
+;; ;; ;; migemo-dictのパスを指定
+;; ;; (setq migemo-dictionary "/usr/local/share/euc-jp/migemo-dict")
+;; ;; (setq migemo-user-dictionary nil)
+;; ;; (setq migemo-regex-dictionary nil)
 
 
 ;; (install-elisp-from-emacswiki "point-undo.el")
