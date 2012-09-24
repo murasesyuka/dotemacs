@@ -99,10 +99,12 @@
 
 ;; 特定ディレクトリ以下を自動でロードするようにしてもいいけど、順番とか、
 ;; これやっぱ外しておこうとかいうのを調整するのが面倒。
+(load "init-helm")
+
 (load "init-face")
 (load "init-e2wm")
+
 (load "init-opensolaris")
-(load "init-helm")
 
 (load "init-c_cpp")
 (load "init-ruby")
@@ -111,6 +113,7 @@
 ;(load "init-scala")
 (load "init-javascript")
 (load "init-clojure")
+
 (load "init-flymake")
 (load "init-gnu_global")
 (load "init-gdb")
