@@ -3,9 +3,6 @@
 
 
 ;;; http://ozmm.org/posts/coffee_mode.html
-;;; git clone git://github.com/defunkt/coffee-mode.git
-;;; coffeescript-mode
-(add-to-list 'load-path "~/.emacs.d/elisp/coffee-mode")
 (require 'coffee-mode)
 
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))

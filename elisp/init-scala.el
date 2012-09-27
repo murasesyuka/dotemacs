@@ -1,8 +1,5 @@
 ;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
 
-;パス設定
-(add-to-list 'load-path "/opt/scala-2.8.1.final/misc/scala-tool-support/emacs/")
-
 ;scala-mode
 (require 'scala-mode-auto)
 (require 'scala-mode-feature-electric)
@@ -20,12 +17,12 @@
 ;               ))
 
 
-;ensime-mode
-(add-to-list 'load-path "~/.emacs.d/elisp/ensime_2.8.1-0.4/elisp/")
-(require 'ensime)
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+;; ;ensime-mode
+;; (add-to-list 'load-path "~/.emacs.d/elisp/ensime_2.8.1-0.4/elisp/")
+;; (require 'ensime)
+;; (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
-;; MINI HOWTO: 
-;; Open .scala file. M-x ensime (once per project)
+;; ;; MINI HOWTO: 
+;; ;; Open .scala file. M-x ensime (once per project)
 
 

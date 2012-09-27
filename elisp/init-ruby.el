@@ -1,8 +1,5 @@
 ;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
 
-;パス設定
-(add-to-list 'load-path "~/.emacs.d/elisp/ruby")
-
 ;ruby-mode
 (autoload 'ruby-mode "ruby-mode" "Mode for editing ruby source files" t)
 
