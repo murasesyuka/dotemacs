@@ -114,6 +114,7 @@
 ;(load "init-scala")
 (load "init-javascript")
 (load "init-clojure")
+(load "init-haskell")
 
 (load "init-flymake")
 (load "init-gnu_global")
