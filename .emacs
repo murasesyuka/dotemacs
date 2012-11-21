@@ -122,6 +122,7 @@
 (load "init-rst")
 (load "init-org")
 (load "init-quickrun")
+(load "init-yasnippet")
 
 (load "init-misc")
 
