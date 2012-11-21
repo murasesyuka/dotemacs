@@ -9,3 +9,15 @@
 
 (require 'e2wm)
 (global-set-key (kbd "M-+") 'e2wm:start-management)
+
+
+;; (auto-install-from-url "https://github.com/kiwanami/emacs-window-manager/raw/master/e2wm-vcs.el")
+
+(require 'magit)
+(require 'e2wm-vcs)
+
+;; M-w に magit パースペクティブ変更を割り当て
+(e2wm:add-keymap
+ e2wm:pst-minor-mode-keymap
+ '(("M-w" . e2wm:dp-magit))
+ e2wm:prefix-key)
