@@ -20,4 +20,8 @@
 ;;     (lambda () (rinari-launch)))
 
 
+;;; slim-mode
+;; https://github.com/minad/emacs-slim
+(require 'slim-mode)
+
 
