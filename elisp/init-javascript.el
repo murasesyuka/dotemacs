@@ -1,6 +1,11 @@
 ;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
 
 
+;;; https://github.com/mooz/js2-mode
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.\\(js\\|json\\)$" . js2-mode))
+
+
 
 ;;; http://ozmm.org/posts/coffee_mode.html
 (require 'coffee-mode)
