@@ -278,6 +278,14 @@
 (require 'auto-complete-config)
 (global-auto-complete-mode 1)
 
+;; (ac-config-default)
+;;
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20121022.2254/dict/")
+;; (global-set-key "\M-/" 'ac-start)
+
+;; C-n/C-p で候補を選択
+(define-key ac-complete-mode-map "\C-n" 'ac-next)
+(define-key ac-complete-mode-map "\C-p" 'ac-previous)
 
 ;; ;;;
 ;; ;;; chapter08
