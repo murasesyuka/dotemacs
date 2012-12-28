@@ -1,2 +1,14 @@
 *~
 *.elc
+
+ac-comphist.dat
+
+auto-install
+elpa
+plugin
+
+gc
+
+session*
+
+url/cookies
