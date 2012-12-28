@@ -5,7 +5,11 @@
 ;; (install-elisp-from-emacswiki "c-eldoc.el")
 (load "c-eldoc")
 
-(add-to-list 'auto-mode-alist '("\\.cu\\'" . c++-mode))
+(setq auto-mode-alist
+      (append '(
+                ("\\.cu$"   . c++-mode)
+                ("\\.cuh$"  . c++-mode)
+                ) auto-mode-alist))
 
 (add-hook 'c-mode-hook
           (lambda ()
