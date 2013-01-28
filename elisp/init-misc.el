@@ -20,21 +20,33 @@
 (global-set-key (kbd "M-g") 'goto-line)             ; goto-line
 
 
-;;; バッファ移動
-(setq windmove-wrap-around t)
-;; Shift + ↓ or → or ← or ↑
-(windmove-default-keybindings)
-;; C-M-{h,j,k,l}でウィンドウ間を移動
-(define-key global-map (kbd "C-M-k") 'windmove-up)
-(define-key global-map (kbd "C-M-j") 'windmove-down)
-(define-key global-map (kbd "C-M-l") 'windmove-right)
-(define-key global-map (kbd "C-M-h") 'windmove-left)
+;; ;;; バッファ移動
+;; (setq windmove-wrap-around t)
+;; ;; Shift + ↓ or → or ← or ↑
+;; (windmove-default-keybindings)
+;; ;; C-M-{h,j,k,l}でウィンドウ間を移動
+;; (define-key global-map (kbd "C-M-k") 'windmove-up)
+;; (define-key global-map (kbd "C-M-j") 'windmove-down)
+;; (define-key global-map (kbd "C-M-l") 'windmove-right)
+;; (define-key global-map (kbd "C-M-h") 'windmove-left)
+
 ;; C-tで分割時移動、分割されていない場合は左右分割して移動
 (defun other-window-or-split ()
   (interactive)
   (when (one-window-p) (split-window-horizontally))
   (other-window 1))
 (global-set-key (kbd "C-t") 'other-window-or-split)
+;;; http://d.hatena.ne.jp/genshou/20101013/1286976810
+;; C-wで分割時に逆移動
+(defun kill-region-or-other-prewindow (beg end)
+  (interactive "r")
+  (if mark-active
+      (kill-region beg end)
+    (other-window -1)))
+(global-set-key (kbd "C-w") 'kill-region-or-other-prewindow)
+;; C-x pでC-x oの逆動作
+(global-set-key (kbd "C-x p")
+		(lambda () (interactive) (other-window -1)))
 
 
 ;;; 日本語の設定 ; Localeに合わせた環境の設定
