@@ -36,17 +36,27 @@
   (when (one-window-p) (split-window-horizontally))
   (other-window 1))
 (global-set-key (kbd "C-t") 'other-window-or-split)
+
 ;;; http://d.hatena.ne.jp/genshou/20101013/1286976810
-;; C-wで分割時に逆移動
-(defun kill-region-or-other-prewindow (beg end)
-  (interactive "r")
-  (if mark-active
-      (kill-region beg end)
-    (other-window -1)))
-(global-set-key (kbd "C-w") 'kill-region-or-other-prewindow)
+;;; C-wで分割時に逆移動
+;; (defun kill-region-or-other-prewindow ()
+;;   (interactive)
+;;   (if (or (not transient-mark-mode) (region-active-p))
+;;       (kill-region (region-beginning) (region-end))
+;;     (other-window -1)))
+;; (global-set-key (kbd "C-w") 'kill-region-or-other-prewindow)
+
 ;; C-x pでC-x oの逆動作
 (global-set-key (kbd "C-x p")
 		(lambda () (interactive) (other-window -1)))
+
+(defun backward-kill-word-or-kill-region ()
+  (interactive)
+  (if (or (not transient-mark-mode) (region-active-p))
+      (kill-region (region-beginning) (region-end))
+    (backward-kill-word 1)))
+(global-set-key (kbd "C-w") 'backward-kill-word-or-kill-region)
+
 
 
 ;;; 日本語の設定 ; Localeに合わせた環境の設定
