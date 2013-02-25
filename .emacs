@@ -69,8 +69,7 @@
 			  "~/.emacs.d/elisp"
 			  "~/.emacs.d/auto-install"
 			  ;; "~/.emacs.d/plugin/org-mode/head/lisp";the latest org-mode
-			  "~/.emacs.d/plugin/org-mode/org-7.9.1/lisp";org-mode
-			  ;;"~/.emacs.d/plugin/org-mode/org-7.8.10/lisp";org-mode
+			  "~/.emacs.d/plugin/org-mode/org-7.9.3e/lisp";org-mode
 			  ) load-path))
 
 ;(add-to-list `load-path "~/svn2git/emacswikipages/" t) ; add to last
