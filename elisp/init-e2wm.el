@@ -9,6 +9,7 @@
 
 (require 'e2wm)
 (global-set-key (kbd "M-+") 'e2wm:start-management)
+(global-set-key (kbd "C-9") 'e2wm:dp-code-main-maximize-toggle-command)
 
 
 ;; (auto-install-from-url "https://github.com/kiwanami/emacs-window-manager/raw/master/e2wm-vcs.el")
