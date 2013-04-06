@@ -296,18 +296,70 @@
 ;(require 'sense-region)
 ;(sense-region-on)
 
-;; auto-complete.el
+
+;; ;;; http://www.nomtats.com/2010/11/auto-completeelemacs.html
+;; ;; auto-complete.el
+;; (require 'auto-complete-config)
+;; ;; (ac-config-default)
+;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20121022.2254/dict/")
+;; (require 'auto-complete-clang)
+(defun my-ac-cc-mode-setup ()
+  ;; 読み込むプリコンパイル済みヘッダ
+  (setq ac-clang-prefix-header "stdafx.pch")
+  ;; 補完を自動で開始しない
+  (setq ac-auto-start nil)
+  (setq ac-clang-flags '("-w" "-ferror-limit" "1"))
+  (setq ac-sources (append '(ac-source-clang
+                             ac-source-yasnippet
+                             ac-source-gtags)
+                           ac-sources)))
+
+;; (defun my-ac-config ()
+;;   (global-set-key "\M-/" 'ac-start)
+;;   ;; C-n/C-p で候補を選択
+;;   (define-key ac-complete-mode-map "\C-n" 'ac-next)
+;;   (define-key ac-complete-mode-map "\C-p" 'ac-previous)
+;;   (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
+;;   (add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
+;;   (add-hook 'ruby-mode-hook 'ac-css-mode-setup)
+;;   (add-hook 'auto-complete-mode-hook 'ac-common-setup)
+;;   (global-auto-complete-mode t))
+
+;; (my-ac-config)
+
 (require 'auto-complete-config)
-(global-auto-complete-mode 1)
-
-;; (ac-config-default)
-;;
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20121022.2254/dict/")
-;; (global-set-key "\M-/" 'ac-start)
+;; (ac-config-default)
+    
+(require 'auto-complete-clang)
+    
+;;(setq ac-auto-start nil)
+(setq ac-quick-help-delay 0.5)
+;; (ac-set-trigger-key "TAB")
+;; (define-key ac-mode-map  [(control tab)] 'auto-complete)
+(define-key ac-mode-map  [(control tab)] 'auto-complete)
+(defun my-ac-config ()
+  (setq-default ac-sources '(ac-source-abbrev
+			     ac-source-dictionary
+			     ac-source-words-in-same-mode-buffers))
+  (global-set-key "\M-/" 'ac-start)
+  ;; ;; C-n/C-p で候補を選択
+  ;; (define-key ac-complete-mode-map "\C-n" 'ac-next)
+  ;; (define-key ac-complete-mode-map "\C-p" 'ac-previous)
+  ;; C-n/C-p で候補を選択
+  (setq ac-use-menu-map t)
+  (define-key ac-menu-map "\C-n" 'ac-next)
+  (define-key ac-menu-map "\C-p" 'ac-previous)
+  (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
+  (add-hook 'c++-mode-common-hook 'ac-cc-mode-setup)
+  (add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
+  (add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)
+  (add-hook 'css-mode-hook 'ac-css-mode-setup)
+  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
+  (global-auto-complete-mode t))
 
-;; C-n/C-p で候補を選択
-(define-key ac-complete-mode-map "\C-n" 'ac-next)
-(define-key ac-complete-mode-map "\C-p" 'ac-previous)
+;; ac-source-gtags
+(my-ac-config)
 
 ;; ;;;
 ;; ;;; chapter08
