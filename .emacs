@@ -95,6 +95,17 @@
 	     '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+
+;;; フォント設定
+
+;; ;; webcache.googleusercontent.com/search?q=cache:NxLz4NL-ZCMJ:d.hatena.ne.jp/eggtoothcroc/20130102/
+;; (set-face-attribute 'default nil :family "Consolas" :height 104)
+;; (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "MeiryoKe_Console"))
+;; (setq face-font-rescale-alist '(("MeiryoKe_Console" . 1.08)))
+
+;  http://stickydiary.blog88.fc2.com/blog-entry-107.html
+(set-default-font "IPAGothic:pixelsize=14:spacing=0")
+
 ;; 個別の設定をロードしまくりパート
 
 ;; 特定ディレクトリ以下を自動でロードするようにしてもいいけど、順番とか、
