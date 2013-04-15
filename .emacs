@@ -125,6 +125,7 @@
 (load "init-javascript")
 (load "init-clojure")
 (load "init-haskell")
+(load "init-go")
 
 (load "init-flymake")
 (load "init-gnu_global")
