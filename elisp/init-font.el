@@ -3,4 +3,4 @@
 ;;; フォント設定
 
 ;; https://github.com/yascentur/Ricty/tree/3.2.1
-(set-frame-font "ricty-12")
+(add-to-list 'default-frame-alist '(font . "ricty-12"))
