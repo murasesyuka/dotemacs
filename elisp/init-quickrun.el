@@ -26,3 +26,5 @@
                       :default "c++")
 
 (quickrun-set-default "c++" "c++/clang++")
+(quickrun-set-default "ruby" "ruby/mruby")
+
