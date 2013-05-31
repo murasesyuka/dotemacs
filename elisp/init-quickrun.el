@@ -25,4 +25,4 @@
                         (:remove . ("%e")))
                       :default "c++")
 
-(quickrun-set-default "c++" "c++/g++")
+(quickrun-set-default "c++" "c++/clang++")
