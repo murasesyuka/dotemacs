@@ -25,14 +25,6 @@
 ;; Shift + ↓ or → or ← or ↑
 (windmove-default-keybindings)
 
-;;; http://d.hatena.ne.jp/genshou/20101013/1286976810
-;;; C-wで分割時に逆移動
-;; (defun kill-region-or-other-prewindow ()
-;;   (interactive)
-;;   (if (or (not transient-mark-mode) (region-active-p))
-;;       (kill-region (region-beginning) (region-end))
-;;     (other-window -1)))
-;; (global-set-key (kbd "C-w") 'kill-region-or-other-prewindow)
 
 ;; C-x pでC-x oの逆動作
 (global-set-key (kbd "C-x p")
