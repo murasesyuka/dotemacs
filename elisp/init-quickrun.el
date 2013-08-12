@@ -19,7 +19,7 @@
                         (:remove . ("%e")))
                       :default "c++")
 
-(quickrun-add-command "c++/g+"
+(quickrun-add-command "c++/g++"
                       '((:command . "g++")
                         (:exec . ("%c -x c++ -std=c++11 -lstdc++ %o -o %e %s" "%e %a"))
                         (:remove . ("%e")))
