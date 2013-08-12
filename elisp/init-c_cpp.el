@@ -14,12 +14,12 @@
 (add-hook 'c-mode-hook
           (lambda ()
             (set (make-local-variable 'eldoc-idle-delay) 0.20)
-	    (color-theme-montz)
+	    (color-theme-arjen)
             (c-turn-on-eldoc-mode)
             ))
 
 (add-hook 'c++-mode-hook
           (lambda ()
-	    (color-theme-montz)
+	    (color-theme-arjen)
             ))
 
