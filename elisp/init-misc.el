@@ -262,15 +262,15 @@
 ;;;
 
 (global-set-key (kbd "C-/") 'undo)                 ; undo
-;; (install-elisp-from-emacswiki "redo+.el")
-(require 'redo+)
-(global-set-key (kbd "C-_") 'redo)
-;(global-set-key (kbd "C-M-/") 'redo)
-;(define-key global-map "\C-\M-/" 'redo)
-(setq undo-no-redo t) ; 過去のundoがredoされないようにする
-;; 大量のundoに耐えられようにする
-(setq undo-limit 600000)
-(setq undo-strong-limit 900000)
+;; ;; (install-elisp-from-emacswiki "redo+.el")
+;; (require 'redo+)
+;; (global-set-key (kbd "C-_") 'redo)
+;; ;(global-set-key (kbd "C-M-/") 'redo)
+;; ;(define-key global-map "\C-\M-/" 'redo)
+;; (setq undo-no-redo t) ; 過去のundoがredoされないようにする
+;; ;; 大量のundoに耐えられようにする
+;; (setq undo-limit 600000)
+;; (setq undo-strong-limit 900000)
 
 ;; (install-elisp "http://taiyaki.org/elisp/sense-region/src/sense-region.el")
 ;(require 'sense-region)
