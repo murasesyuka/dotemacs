@@ -38,3 +38,14 @@
               (local-set-key (kbd "M-s") 'helm-gtags-find-symbol)
               (local-set-key (kbd "C-t") 'helm-gtags-pop-stack)))
 
+;; http://qiita.com/hayamiz/items/8e8c7fca64b4810d8e78
+(defun update-gtags ()
+  (interactive)
+  (let* ((file (buffer-file-name (current-buffer)))
+	 (dir (directory-file-name (file-name-directory file))))
+    (when (executable-find "global")
+      (start-process "gtags-update" nil
+		     "global" "-uv"))))
+
+;; (add-hook 'after-save-hook
+;; 	  'update-gtags)
