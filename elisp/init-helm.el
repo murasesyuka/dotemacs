@@ -4,4 +4,4 @@
 ;(helm-mode 1)
 
 (global-set-key (kbd "C-;") 'helm-mini)
-(global-set-key (kbd "C-z") 'helm-M-x)
+(global-set-key (kbd "M-x") 'helm-M-x)
