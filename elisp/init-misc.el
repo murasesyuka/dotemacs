@@ -204,7 +204,8 @@
 
 
 ;; (install-elisp "http://homepage3.nifty.com/oatu/emacs/archives/auto-save-buffers.el")
-(require 'auto-save-buffers)
+(require 'auto-save-buffers-enhanced)
+(auto-save-buffers-enhanced t)
 (run-with-idle-timer 2 t 'auto-save-buffers) 
 
 
