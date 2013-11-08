@@ -20,5 +20,5 @@
 ;; M-w に magit パースペクティブ変更を割り当て
 (e2wm:add-keymap
  e2wm:pst-minor-mode-keymap
- '(("M-w" . e2wm:dp-magit))
+ '(("C-M-w" . e2wm:dp-magit))
  e2wm:prefix-key)
