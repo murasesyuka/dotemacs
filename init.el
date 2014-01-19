@@ -112,7 +112,6 @@
 (load "init-ruby")
 (load "init-rails")
 ;(load "init-python") 			;commentout for update emacs24
-;(load "init-scala")
 (load "init-javascript")
 (load "init-clojure")
 (load "init-haskell")
