@@ -106,12 +106,6 @@
 ;;; Emacs lisp テクニックバイブル
 ;;;
 
-;;; 試行錯誤用ファイルを開くための設定
-(require 'open-junk-file)
-;; C-x C-zで試行錯誤ファイルを開く
-(global-set-key (kbd "C-x C-z") 'open-junk-file)
-(setq open-junk-file-format "~/Dropbox/junk/%Y-%m-%d-%H%M%S.")
-
 ;;; 式の評価結果を注釈するために設定
 (require 'lispxmp)
 ;; emacs-lisp-modeでC-c C-dを押すと注釈される
