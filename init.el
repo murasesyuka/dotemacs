@@ -89,8 +89,6 @@
 (load "init-e2wm")
 (load "init-font")
 
-(load "init-opensolaris")
-
 (load "init-c_cpp")
 (load "init-ruby")
 (load "init-rails")
