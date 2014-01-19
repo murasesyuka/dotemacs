@@ -1,13 +1,6 @@
 ;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
 
 
-
-(require 'org-install)
-
-(require 'ob-ruby)
-(require 'ob-python)
-
-
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 (global-set-key "\C-cl" 'org-store-link)
