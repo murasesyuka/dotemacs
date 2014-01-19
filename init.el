@@ -29,15 +29,6 @@
 
 
 ;; Emacsenの種類とVerを判別
-(defvar run-emacs20
-  (and (equal emacs-major-version 20)
-       (null (featurep 'xemacs))))
-(defvar run-emacs21
-  (and (equal emacs-major-version 21)
-       (null (featurep 'xemacs))))
-(defvar run-emacs22
-  (and (equal emacs-major-version 22)
-       (null (featurep 'xemacs)))); OpenSolaris2090.06
 (defvar run-emacs23
   (and (equal emacs-major-version 23)
        (null (featurep 'xemacs))))
