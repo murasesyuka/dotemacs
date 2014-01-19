@@ -37,14 +37,6 @@
        (null (featurep 'xemacs))))
 
 
-;; meadowの種類とVerを判別
-(defvar run-meadow (featurep 'meadow))
-(defvar run-meadow1 (and run-meadow run-emacs20))
-(defvar run-meadow2 (and run-meadow run-emacs21))
-(defvar run-meadow3 (and run-meadow run-emacs22))
-
-
-
 (defvar run-xemacs (featurep 'xemacs))
 (defvar run-xemacs-no-mule
   (and run-xemacs (not (featurep 'mule))))
