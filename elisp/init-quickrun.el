@@ -25,6 +25,6 @@
                         (:remove . ("%e")))
                       :default "c++")
 
-(quickrun-set-default "c++" "c++/clang++")
+(quickrun-set-default "c++" "c++/g++")
 (quickrun-set-default "ruby" "ruby/mruby")
 
